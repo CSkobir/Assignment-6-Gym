@@ -23,7 +23,6 @@ const Workouts = async () => {
 
   return (
     <section id="library" className="container mx-auto px-4 py-8 md:py-12 scroll-mt-20">
-      {/* Section Header */}
       <div className="mb-6 space-y-1">
         <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
           The Library
@@ -33,7 +32,6 @@ const Workouts = async () => {
         </p>
       </div>
 
-      {/* Interactive Library List */}
       <WorkoutLibrary workouts={workoutData} />
     </section>
   );

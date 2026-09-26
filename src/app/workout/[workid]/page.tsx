@@ -23,7 +23,7 @@ const getWorkout = async (id: string): Promise<IWorkout | null> => {
       return await res.json();
     }
 
-    // Fallback: fetch all and find by ID
+    // Fallback
     const allRes = await fetch("https://api.abcz.workers.dev/api/fitlog");
     if (allRes.ok) {
       const allWorkouts: IWorkout[] = await allRes.json();
@@ -60,7 +60,6 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-12">
-      {/* Back Link */}
       <div className="mb-6">
         <Link
           href="/workout"
@@ -70,10 +69,7 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
           <span>Back to Library</span>
         </Link>
       </div>
-
-      {/* Main Two-Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        {/* Left Column: Image */}
         <div className="lg:col-span-5 relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl border border-[#232733] bg-[#12151e] shadow-2xl">
           <Image
             src={workout.image}
@@ -84,10 +80,7 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
             className="object-cover"
           />
         </div>
-
-        {/* Right Column: Details */}
         <div className="lg:col-span-7 space-y-6">
-          {/* Title & Description */}
           <div className="space-y-2">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white">
               {workout.name}
@@ -96,8 +89,6 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
               {workout.description}
             </p>
           </div>
-
-          {/* Muscle Group Badges */}
           <div className="flex flex-wrap gap-2">
             {workout.muscleGroups?.map((group, idx) => (
               <span
@@ -108,14 +99,8 @@ const WorkoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
               </span>
             ))}
           </div>
-
-          {/* Specifications Panel */}
           <WorkoutSpecs workout={workout} />
-
-          {/* Form Instructions */}
           <WorkoutInstructions instructions={workout.instructions} />
-
-          {/* Action Buttons */}
           <WorkoutActionButtons workout={workout} />
         </div>
       </div>

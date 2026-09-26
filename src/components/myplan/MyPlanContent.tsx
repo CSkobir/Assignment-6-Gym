@@ -47,7 +47,6 @@ const MyPlanContent = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-12 space-y-8">
-      {/* Page Heading */}
       <div className="space-y-1">
         <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white">
           My Plan
@@ -57,13 +56,10 @@ const MyPlanContent = () => {
         </p>
       </div>
 
-      {/* Metrics Summary */}
       <PlanMetricsSummary todayPlan={todayPlan} />
 
-      {/* Tabs & Controls */}
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-b border-[#232733] pb-4">
-          {/* Tabs */}
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActiveTab("today")}
@@ -88,7 +84,6 @@ const MyPlanContent = () => {
             </button>
           </div>
 
-          {/* Sort selector */}
           <div className="flex items-center gap-2 self-end sm:self-auto">
             <ArrowUpDown className="w-4 h-4 text-[#8e93a0]" />
             <select
@@ -104,7 +99,6 @@ const MyPlanContent = () => {
           </div>
         </div>
 
-        {/* Content list */}
         {displayedList.length > 0 ? (
           <div className="space-y-4">
             {displayedList.map((workout) => (

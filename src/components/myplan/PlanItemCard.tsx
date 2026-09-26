@@ -29,7 +29,6 @@ const PlanItemCard = ({
           : "border-[#232733] bg-[#12151d] hover:border-[#2f3545]"
       }`}
     >
-      {/* Left: Thumbnail & Info */}
       <div className="flex items-center gap-4 w-full sm:w-auto">
         <div className="relative h-20 w-24 sm:w-28 shrink-0 overflow-hidden rounded-xl bg-[#181c26] border border-[#232733]">
           <Image
@@ -83,9 +82,7 @@ const PlanItemCard = ({
         </div>
       </div>
 
-      {/* Right: Actions */}
       <div className="flex items-center justify-end gap-2.5 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-[#232733]">
-        {/* View Details Link */}
         <Link
           href={`/workout/${workout.id}`}
           className="rounded-xl border border-[#2d3342] bg-[#161a24] px-3.5 py-2 text-xs font-semibold text-[#d0d3da] hover:bg-[#1f2432] hover:text-white transition whitespace-nowrap"
@@ -93,7 +90,6 @@ const PlanItemCard = ({
           View Details
         </Link>
 
-        {/* Today's Plan Actions */}
         {isTodayPlan && onToggleComplete && (
           <button
             onClick={onToggleComplete}
@@ -108,7 +104,6 @@ const PlanItemCard = ({
           </button>
         )}
 
-        {/* Saved List Action: Move to Today's Plan */}
         {!isTodayPlan && onAddToToday && (
           <button
             onClick={onAddToToday}
@@ -119,7 +114,6 @@ const PlanItemCard = ({
           </button>
         )}
 
-        {/* Remove Button */}
         <button
           onClick={onRemove}
           title="Remove from plan"

@@ -9,7 +9,6 @@ const Banner = () => {
     <section className="container mx-auto px-4 py-6 md:py-10">
       <div className="relative overflow-hidden rounded-3xl border border-[#232733] bg-gradient-to-br from-[#141721] via-[#12151d] to-[#0e1017] p-6 sm:p-10 md:p-12">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
-          {/* Left: Text Content */}
           <div className="space-y-5 text-center lg:text-left z-10">
             <span className="inline-block rounded-full bg-[#baff00]/10 border border-[#baff00]/30 px-3.5 py-1 text-xs font-bold tracking-wider text-[#baff00] uppercase">
               Workout Library
@@ -42,8 +41,6 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-
-          {/* Right: Graphic */}
           <div className="relative flex items-center justify-center">
             <div className="absolute h-72 w-72 rounded-full bg-[#baff00]/10 blur-3xl pointer-events-none" />
             <div className="relative max-w-[420px] w-full transition-transform duration-500 hover:scale-105">

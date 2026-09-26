@@ -14,7 +14,6 @@ const PlanMetricsSummary = ({ todayPlan }: IPlanMetricsSummaryProps) => {
   return (
     <div className="rounded-2xl border border-[#232733] bg-[#12151d] p-6 sm:p-8">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#232733]">
-        {/* Exercises */}
         <div className="flex items-center gap-4 sm:justify-start">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#baff00]/10 border border-[#baff00]/20 text-[#baff00]">
             <Dumbbell className="h-6 w-6" />
@@ -30,7 +29,6 @@ const PlanMetricsSummary = ({ todayPlan }: IPlanMetricsSummaryProps) => {
           </div>
         </div>
 
-        {/* Minutes */}
         <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-8 sm:justify-start">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400">
             <Clock className="h-6 w-6" />
@@ -46,7 +44,6 @@ const PlanMetricsSummary = ({ todayPlan }: IPlanMetricsSummaryProps) => {
           </div>
         </div>
 
-        {/* Calories */}
         <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-8 sm:justify-start">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400">
             <Flame className="h-6 w-6" />
