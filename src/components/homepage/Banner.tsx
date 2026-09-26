@@ -14,9 +14,9 @@ const Banner = () => {
               Workout Library
             </span>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.1]">
-              Train With Intent. <br />
-              <span className="text-[#baff00]">Log Every Set.</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-black uppercase tracking-tight text-white leading-[1.1]">
+              Train With Intent.Log <br />
+              Every Set.
             </h1>
 
             <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#9da1aa] mx-auto lg:mx-0">
@@ -30,15 +30,15 @@ const Banner = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#baff00] px-6 py-3.5 text-sm font-black uppercase tracking-wider text-black transition-all hover:bg-[#c8ff32] hover:shadow-lg hover:shadow-[#baff00]/20 active:scale-95"
               >
                 <span>Browse Workouts</span>
-                <ArrowRight className="w-4 h-4" />
+                {/* <ArrowRight className="w-4 h-4" /> */}
               </a>
 
-              <Link
+              {/* <Link
                 href="/myplan"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#2d3342] bg-[#161a24] px-6 py-3.5 text-sm font-bold tracking-wide text-white transition-all hover:bg-[#1e2330] hover:border-[#baff00]/40"
               >
                 View My Plan
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="relative flex items-center justify-center">
