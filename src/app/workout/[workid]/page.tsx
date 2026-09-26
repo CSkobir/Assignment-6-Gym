@@ -16,15 +16,15 @@ interface IWorkoutDetailsPageProps {
 
 const getWorkout = async (id: string): Promise<IWorkout | null> => {
   try {
-    const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`, {
+    const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`, {
       next: { revalidate: 3600 },
     });
     if (res.ok) {
       return await res.json();
     }
 
-    // Fallback
-    const allRes = await fetch("https://api.abcz.workers.dev/api/fitlog");
+    // old Api with Problem  https://api.abcz.workers.dev/api/fitlog  
+    const allRes = await fetch("https://api.api-store.workers.dev/api/fitlog");
     if (allRes.ok) {
       const allWorkouts: IWorkout[] = await allRes.json();
       return allWorkouts.find((w) => String(w.id) === String(id)) || null;
